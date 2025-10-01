@@ -3,7 +3,6 @@ package tests;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -40,8 +39,6 @@ public class BaseTest {
 
     @BeforeTest
     public void setUp() {
-        WebDriverManager.chromedriver().setup();
-
         driver = new ChromeDriver();
         driver.manage().window().maximize();
 //        doi khoi tao browser
